@@ -1,5 +1,5 @@
 # Happyscribe client for Ruby
-This is a very basic NON-OFFICIAL gem based on the happyscribes api (https://dev.happyscribe.co/). It works out of the boxe and make the usage of the api much easier ;-)
+This is a very basic NON-OFFICIAL gem based on the happyscribes api (https://dev.happyscribe.co/). It works out of the box and makes the usage of the api much easier ;-)
 
 ## dependencies
 because no one love to have 10k of dependencies, this gem uses only: net/http,uri,json and securerandom. so do not worry about the size of the gem.
