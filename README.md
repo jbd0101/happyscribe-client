@@ -36,6 +36,8 @@ create an instance:
 ```ruby
 instance = Happyscribe::Transcript.new(my_api_token)
 ```
+
+#### API
 create a transcription.  you can use all of the avaiable language codes (https://dev.happyscribe.co/#languages)
 ```ruby
 instance.create(public_url_to_audio,"fr-FR")
@@ -62,6 +64,14 @@ retrieve an export
 ```ruby
 instance.retrieve_export(export_id)
 ```
+
+#### Magic functions
+because everyone just one to have a string with the transcription, there is a function that creates the export, retrieve the export when it's ready, download the attachment and return it in utf-8.
+
+```ruby
+instance.export_in_txt(transcription_id)
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/happyscribe. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.

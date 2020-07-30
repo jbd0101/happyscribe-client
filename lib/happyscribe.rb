@@ -109,8 +109,8 @@ module Happyscribe
       end
       return JSON.parse response.body
     end
-    def export_in_txt(export_id)
-      export = create_export(export_id,"txt")["id"]
+    def export_in_txt(transcription)
+      export = create_export(transcription,"txt")["id"]
       sleep(5)
       while true
         retrieved = retrieve_export(export)
