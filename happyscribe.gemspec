@@ -10,14 +10,14 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Very simple ruby gem for the transcription api of happyscribe}
   spec.description   = %q{the api of happyscribe is quite verbose, this ruby gem make it more easy to use (I hope so)}
-  spec.homepage      = "/"
+  spec.homepage      = "https://github.com/jbd0101/happyscribe-client"
   spec.license       = "MIT"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/jbd0101/happyscribe-client"
+  spec.metadata["changelog_uri"] = "https://github.com/jbd0101/happyscribe-client"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
