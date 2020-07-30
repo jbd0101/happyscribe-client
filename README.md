@@ -1,5 +1,5 @@
 # Happyscribe client for Ruby
-This is a very basic NON-OFFICIAL gem based on the happyscribes api (https://dev.happyscribe.co/). It works out of the box and makes the usage of the api much easier ;-)
+This is a small NON-OFFICIAL gem based on happyscribes api (https://dev.happyscribe.co/). It works out of the box and makes the usage of the api much easier ;-)
 
 ## dependencies
 because no one love to have 10k of dependencies, this gem uses only: net/http,uri,json and securerandom. so do not worry about the size of the gem.
@@ -29,7 +29,7 @@ require "happyscribe"
 ```
 
 ### nota bene
-all the functions sends you back a parsed json (array) with the response of the api.
+all the functions send you back a parsed json (array) with the response of the api.
 
 ### some Ruby please !
 create an instance:
@@ -48,7 +48,7 @@ retrieve all the transcriptions
 ```ruby
 instance.list
 ```
-retrieve all a transcription
+retrieve a transcription
 ```ruby
 instance.retrieve(transcription_id)
 ```
@@ -65,8 +65,8 @@ retrieve an export
 instance.retrieve_export(export_id)
 ```
 
-#### Magic functions
-because everyone just one to have a string with the transcription, there is a function that creates the export, retrieve the export when it's ready, download the attachment and return it in utf-8.
+#### Magic function
+because we only want to have a string of the transcription, there is a function that creates the export, retrieve the export when it's ready, download the attachment and return it in utf-8. 
 
 ```ruby
 instance.export_in_txt(transcription_id)
