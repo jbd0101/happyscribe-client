@@ -94,6 +94,31 @@ module Happyscribe
       end
       return JSON.parse response.body
     end
+    def create_multiple_export(ids,format="txt",timestamps=false,speakers=false,comments=false,highlights=false)
+      uri = URI.parse("#{@base}/exports")
+      request = Net::HTTP::Post.new(uri)
+      request.content_type = "application/json"
+      request["Authorization"] = @auth
+      request.body = JSON.dump({
+        "export" => {
+          "format" => format,
+          "show_timestamps" => timestamps,
+          "show_speakers" => speakers,
+          "show_comments" => comments,
+          "show_highlights" => highlights,
+          "transcription_ids" => ids
+        }
+      })
+
+      req_options = {
+        use_ssl: uri.scheme == "https",
+      }
+
+      response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+        http.request(request)
+      end
+      return JSON.parse response.body
+    end
     def retrieve_export(export_id)
       endpoint = "#{@base}/exports/#{export_id}"
       uri = URI.parse(endpoint)
