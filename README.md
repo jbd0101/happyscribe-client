@@ -72,7 +72,9 @@ instance.retrieve_export(export_id)
 ```
 
 #### Magic function
-because we only want to have a string of the transcription, there is a function that creates the export, retrieve the export when it's ready, download the attachment and return it in utf-8. 
+because we only want to have a string of the transcription, there is a function that creates the export, retrieve the export when it's ready, download the attachment and return it in utf-8.
+
+if the transcription is not done, the function will raise an error.
 
 ```ruby
 instance.export_in_txt(transcription_id)
@@ -83,7 +85,7 @@ instance.export_in_txt(transcription_id)
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/jbd0101/happyscribe. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-you can always star the project ;) 
+you can always star the project ;)
 
 ## License
 
