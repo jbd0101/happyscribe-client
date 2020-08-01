@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["jean-christophe bauduin"]
   spec.email         = [""]
 
-  spec.summary       = %q{Very simple ruby gem for the transcription api of happyscribe}
-  spec.description   = %q{the api of happyscribe is quite verbose, this ruby gem make it more easy to use (I hope so)}
+  spec.summary       = %q{ruby gem for the api of happyscribe}
+  spec.description   = %q{the api of happyscribe is quite verbose, this ruby gem make it easy ! take a look at the documentation on github ( https://github.com/jbd0101/happyscribe-client ) }
   spec.homepage      = "https://github.com/jbd0101/happyscribe-client"
   spec.license       = "MIT"
 

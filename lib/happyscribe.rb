@@ -134,19 +134,24 @@ module Happyscribe
       end
       return JSON.parse response.body
     end
-    def export_in_txt(transcription)
-      export = create_export(transcription,"txt")["id"]
-      sleep(5)
-      while true
-        retrieved = retrieve_export(export)
-        if(retrieved["state"]=="ready")
-          break
-        else
-          sleep(2)
+    def export_in_txt(transcription_id)
+      transcription = retrieve transcription_id
+      if(transcription["state"]=="automatic_done")
+        export = create_export(transcription_id,"txt")["id"]
+        sleep(5)
+        while true
+          retrieved = retrieve_export(export)
+          if(retrieved["state"]=="ready")
+            break
+          else
+            sleep(2)
+          end
         end
+        txt = URI.parse(retrieved["download_link"]).open.read.force_encoding("utf-8")
+        return txt
+      else
+        raise "The transcription is not ready"
       end
-      txt = URI.parse(retrieved["download_link"]).open.read.force_encoding("utf-8")
-      return txt
     end
   end
 end
